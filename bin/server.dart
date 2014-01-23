@@ -1,0 +1,30 @@
+library example_forcedart;
+
+import 'dart:io';
+import 'package:forcemvc/force_mvc.dart';
+import 'package:logging/logging.dart' show Logger, Level, LogRecord;
+import 'count_controller.dart';
+
+final Logger log = new Logger('ChatApp');
+
+void main() { 
+  // Set up logger.
+  Logger.root.level = Level.ALL;
+  Logger.root.onRecord.listen((LogRecord rec) {
+    print('${rec.level.name}: ${rec.time}: ${rec.message}');
+  });
+  
+  var portEnv = Platform.environment['PORT'];
+  var port = portEnv == null ? 8080 : int.parse(portEnv);
+  
+  WebServer server = new WebServer(host: "0.0.0.0", port: port);
+  server.register(new CountController());
+  server.on("/", (req, model) {
+    return "index";
+  });
+  server.start().then((_) {
+    server.serve("/client.dart").listen((request) { 
+      server.serveFile("../web/client.dart", request);
+    });
+  });
+}
