@@ -1,0 +1,86 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <meta charset="utf8">
+    <script type="application/dart" src="client.dart"></script>
+    <script src="packages/browser/dart.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Bootstrap -->
+      <link href="bootstrap/bootstrap.min.css" rel="stylesheet" media="screen">
+      <link href="css/font-awesome.min.css" rel="stylesheet" media="screen">
+      <link href="css/bootflat.css" rel="stylesheet" media="screen">
+      <link href="css/bootflat-extensions.css" rel="stylesheet" media="screen">
+      <link href="css/bootflat-square.css" rel="stylesheet" media="screen">
+      <style>
+        #context-wrapper {
+          min-height: 400px;
+        }
+        #context {
+          position: absolute;
+          bottom: 0;
+        }
+        .box {
+          border: 1px solid #d8d8d8;
+          -moz-border-radius: 3px;
+          -webkit-border-radius: 3px;
+          border-radius: 3px;
+          background-color: #fff;
+          border-bottom-width: 2px;
+          margin: 10px 0 20px 0;
+          padding: 20px 20px;
+        }
+        .mheight {
+          min-height: 200px;
+        }
+        .small {
+          font-size: 10pt;
+          color: #aaa;
+        }
+      </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Force Chat Example</h1>
+        <div id="status"></div>
+      </header>
+      <div id="enter_screen">
+        <div class="row">
+          <div class="col-xs-12 col-md-6">
+            <div class="box">
+                Enter a chatname:
+                <input class="form-control speak" type="text" value="" id="name" />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-md-6 small">
+            This chat application is an example of the <a href="https://github.com/jorishermans/dart-force">dart force framework</a>! 
+            <br />
+            <br />
+            You can find the sourcecode of this example <a href="https://github.com/jorishermans/dart-force-chat-example">here</a>.
+          </div>
+        </div>
+      </div>
+      <div id="chat_screen" style="display: none;">
+        <div class="row">
+          <div class="hidden-xs col-xs-3">
+             <div class="box mheight">
+              <h3>Online list</h3>
+              <div id="nameslist"></div>
+            </div>
+            <div class="small"><a id="backLink" href="#">enter new name</a></div>
+          </div>
+          <div class="col-xs-9">
+            <div class="row">
+              <div class="col-xs-12">
+                <div id="context-wrapper"><div id="context"></div></div>
+              </div>
+            </div>
+            <input class="form-control speak" type="text" value="" id="speak" disabled/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

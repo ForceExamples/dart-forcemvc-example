@@ -10,14 +10,16 @@ class CountController {
     count = 1;
   }
   
-  @RequestMapping(value: "/bla", method: "GET")
-  void index(req, Model model) {
-    model.addAttribute("bla", "hallo");
+  @RequestMapping(value: "/count")
+  String countMethod(req, Model model) {
+    count++;
+    model.addAttribute("count", "$count");
+    return "count";
   }
   
-  @RequestMapping(value: "/count")
-  void index2(req, Model model) {
-    count++;
-    model.addAttribute("bla", "count $count");
+  @RequestMapping(value: "/json")
+  void countJson(req, Model model) {
+    model.addAttribute("count", "$count");
+    model.addAttribute("bla", "hallo");
   }
 }
