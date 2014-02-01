@@ -1,7 +1,6 @@
 library multiplayer_game_force;
 
 import 'package:forcemvc/force_mvc.dart';
-import 'package:http/http.dart';
 
 class CountController {
   int count = 0;
