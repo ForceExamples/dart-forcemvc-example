@@ -9,6 +9,12 @@ class CountController {
     count = 1;
   }
   
+  @ModelAttribute("datetime")
+  String addDateTime() {
+    DateTime now = new DateTime.now();
+    return now.toString();
+  }
+  
   @RequestMapping(value: "/count")
   String countMethod(req, Model model) {
     count++;
