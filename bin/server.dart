@@ -18,7 +18,7 @@ void main() {
   var port = portEnv == null ? 8080 : int.parse(portEnv);
   
   WebServer server = new WebServer(host: "0.0.0.0", port: port);
-  server.register(new CountController());
+
   server.on("/", (req, model) {
     return "index";
   });
