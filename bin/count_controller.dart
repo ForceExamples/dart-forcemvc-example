@@ -1,6 +1,4 @@
-library multiplayer_game_force;
-
-import 'package:forcemvc/force_mvc.dart';
+part of example_forcedart;
 
 @Controller()
 class CountController {
