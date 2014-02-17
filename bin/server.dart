@@ -3,8 +3,10 @@ library example_forcedart;
 import 'dart:io';
 import 'package:forcemvc/force_mvc.dart';
 import 'package:logging/logging.dart' show Logger, Level, LogRecord;
+import 'dart:math';
 
 part 'count_controller.dart';
+part 'random_interceptor.dart';
 
 final Logger log = new Logger('ChatApp');
 
