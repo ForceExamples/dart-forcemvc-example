@@ -5,6 +5,7 @@ import 'package:forcemvc/force_mvc.dart';
 import 'package:logging/logging.dart' show Logger, Level, LogRecord;
 import 'dart:math';
 
+part 'path_controller.dart';
 part 'count_controller.dart';
 part 'random_interceptor.dart';
 

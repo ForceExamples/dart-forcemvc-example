@@ -21,6 +21,12 @@ class CountController {
     return "count";
   }
   
+  @RequestMapping(value: "/var/{var1}")
+  String variable(req, Model model) {
+    model.addAttribute("variable", req.path_variables['var1']);
+    return "pathvar";
+  }
+  
   @RequestMapping(value: "/json")
   void countJson(req, Model model) {
     model.addAttribute("count", "$count");
