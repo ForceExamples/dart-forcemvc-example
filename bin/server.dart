@@ -21,7 +21,7 @@ void main() {
   var portEnv = Platform.environment['PORT'];
   var port = portEnv == null ? 8080 : int.parse(portEnv);
   
-  WebServer server = new WebServer(host: "0.0.0.0", buildPath: "../build/", port: port);
+  WebServer server = new WebServer(host: "0.0.0.0", buildPath: "../build/web/", port: port);
 
   server.on("/", (req, model) {
     return "index";

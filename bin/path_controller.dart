@@ -4,8 +4,8 @@ part of example_forcedart;
 class PathController {
   
   @RequestMapping(value: "/var/{var1}/")
-  String variable(req, Model model) {
-    model.addAttribute("variable", req.path_variables['var1']);
+  String variable(req, Model model, var1) {
+    model.addAttribute("variable", var1);
     return "pathvar";
   }
 
