@@ -8,5 +8,11 @@ class PathController {
     model.addAttribute("variable", var1);
     return "pathvar";
   }
+  
+  @RequestMapping(value: "/path/{var1}/")
+  String multivariable(req, Model model, @PathVariable("var1") variable) {
+      model.addAttribute("variable", variable);
+      return "pathvar";
+  }
 
 }
