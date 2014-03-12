@@ -16,7 +16,7 @@ class PathController {
   }
 
   @RequestMapping(value: "/qs/")
-  String querystring(req, Model model, @RequestParam(value:"var", defaultvalue: "what?") variable) {
+  String querystring(req, Model model, @RequestParam(value:"var", defaultValue: "what?") variable) {
       model.addAttribute("variable", variable);
       return "requestparam";
   }
