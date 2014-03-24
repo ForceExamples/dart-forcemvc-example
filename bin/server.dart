@@ -1,6 +1,7 @@
 library example_forcedart;
 
 import 'dart:io';
+import 'dart:async';
 import 'package:forcemvc/force_mvc.dart';
 import 'package:logging/logging.dart' show Logger, Level, LogRecord;
 import 'dart:math';
