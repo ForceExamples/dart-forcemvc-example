@@ -10,6 +10,7 @@ part 'post_controller.dart';
 part 'redirect_controller.dart';
 part 'path_controller.dart';
 part 'count_controller.dart';
+part 'secure_controller.dart';
 part 'random_interceptor.dart';
 
 final Logger log = new Logger('ChatApp');
