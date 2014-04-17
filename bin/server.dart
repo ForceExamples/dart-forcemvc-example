@@ -7,11 +7,14 @@ import 'package:logging/logging.dart' show Logger, Level, LogRecord;
 import 'dart:math';
 
 part 'post_controller.dart';
+part 'login_controller.dart';
 part 'redirect_controller.dart';
 part 'path_controller.dart';
 part 'count_controller.dart';
 part 'secure_controller.dart';
 part 'random_interceptor.dart';
+
+part 'security/session_strategy.dart';
 
 final Logger log = new Logger('ChatApp');
 
@@ -26,10 +29,12 @@ void main() {
   var port = portEnv == null ? 8080 : int.parse(portEnv);
   
   WebServer server = new WebServer(host: "0.0.0.0", buildPath: "../build/web/", port: port);
-
+  server.strategy = new SessionStrategy();
+  
   server.on("/", (req, model) {
     return "index";
   });
+  
   server.start().then((_) {
     server.serve("/client.dart").listen((request) { 
       server.serveFile("../web/client.dart", request);
