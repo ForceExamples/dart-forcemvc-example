@@ -9,7 +9,7 @@ handlers:
 - url: /
   script: server.dart
   
-# Static content  
-#- url: /
-#  match: postregex
-#  static_dir: web
+#Static content  
+- url: /
+  match: postregex
+  static_dir: web
