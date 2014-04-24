@@ -1,0 +1,15 @@
+application: Force Mvc Example
+version: 1
+deploy: true
+pub: true
+dart2js: true 
+framework: forcemvc
+
+handlers:
+- url: /
+  script: server.dart
+  
+# Static content  
+#- url: /
+#  match: postregex
+#  static_dir: web
