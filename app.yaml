@@ -11,10 +11,10 @@ handlers:
 
 # Static content, will be served by your app's Nginx instance   
 - url: /web
-  match: postregex
+  match: preregex
   static_dir: web
   
 - url: /static
-  match: postregex
+  match: preregex
   static_dir: static
   
