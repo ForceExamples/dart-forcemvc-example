@@ -1,4 +1,6 @@
 dart-forcemvc-example
 =====================
 
-This is an example of dart forcemvc package. [dart forcemvc](https://github.com/jorishermans/dart-forcemvc) - [live example](http://forcemvc.herokuapp.com/)
+Live version running on DartVoid:
+* [http://force-mvc.scorpiion.dartblob.com/](http://force-mvc.scorpiion.dartblob.com/)
+
