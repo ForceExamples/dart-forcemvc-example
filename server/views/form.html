@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf8">
-    <script type="application/dart" src="client.dart"></script>
+    <script type="application/dart" src="web/client.dart"></script>
     <script src="packages/browser/dart.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <!-- Bootstrap -->
@@ -22,9 +22,25 @@
     <div class="container">
       <header>
         <h1>Force MVC example</h1>
-        <div id="status"></div>
+        <div id="status">form example</div>
       </header>
-      <div>{{number}} numbers for {{name}}</div>
+      <form role="form" action="/post/" method="POST">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputName">name</label>
+          <input type="text" name="name" class="form-control" id="exampleInputName" placeholder="Enter name">
+        </div>
+        <div class="checkbox">
+          <label>
+            <input name="checks" type="checkbox"> Check me out
+          </label>
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      
       <br /><br />
       <div class="row">
           <div class="col-xs-12 col-md-6 small">
