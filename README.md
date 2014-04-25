@@ -4,4 +4,4 @@ dart-forcemvc-example
 Live version running on DartVoid:
 * [http://force-mvc.scorpiion.dartblob.com/](http://force-mvc.scorpiion.dartblob.com/)
 
-Forked from [jorishermansdart repo](https://github.com/jorishermans/dart-forcemvc-example). Currently this app uses a forked version of the forcemvc package as well. In the comming days it will hopefully be less custom and more official. 
+This is a first version forked from [jorishermansdart repo](https://github.com/jorishermans/dart-forcemvc-example). Currently this app uses a forked version of the forcemvc package as well. In the comming days it will hopefully become less custom and more official. I would not recommend using this repo right now if you are not a dart-force or dart-force-mvc developer since it might change very soon. Check out the live demo anyway and we should have a good template and some instruction on how to run Force on DartVoid soon!
