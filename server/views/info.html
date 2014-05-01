@@ -2,8 +2,8 @@
 <html>
   <head>
     <meta charset="utf8">
-    <script type="application/dart" src="client.dart"></script>
-    <script src="packages/browser/dart.js"></script>
+    <script type="application/dart" src="web/client.dart"></script>
+    <script src="web/packages/browser/dart.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <!-- Bootstrap -->
       <link href="/static/bootstrap/bootstrap.min.css" rel="stylesheet" media="screen">
@@ -21,22 +21,10 @@
   <body>
     <div class="container">
       <header>
-        <h1>Force MVC example</h1>
-        <div id="status">Please login (admin - admin123)</div>
+        <h1>Force MVC authentication example</h1>
+        <div id="status"></div>
       </header>
-      <form role="form" action="/login/" method="POST">
-        <input type="hidden" name="referer" value="{{referer}}" />
-        <div class="form-group">
-          <label for="exampleInputEmail1">Email address</label>
-          <input type="text" name="user" class="form-control" id="userInput" placeholder="user name">
-        </div>
-        <div class="form-group">
-          <label for="exampleInputName">name</label>
-          <input type="password" name="pwd" class="form-control" id="pwdInput" placeholder="password">
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
-      
+      <div>restricted for admins to watch</div>
       <br /><br />
       <div class="row">
           <div class="col-xs-12 col-md-6 small">

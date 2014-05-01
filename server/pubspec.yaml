@@ -5,5 +5,5 @@ dependencies:
   http_server: '>=0.9.0 <0.10.0'
   logging: '>=0.9.0 <0.10.0' 
   forcemvc: 
-    git: git://github.com/jorishermans/dart-forcemvc.git
+    git: https://github.com/Scorpiion/dart-forcemvc
    

@@ -25,3 +25,33 @@ h1, p {
   text-align: center;
   margin-top: 140px;
 }
+
+#context-wrapper {
+  min-height: 400px;
+}
+
+#context {
+  position: absolute;
+  bottom: 0;
+}
+
+.box {
+  border: 1px solid #d8d8d8;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #fff;
+  border-bottom-width: 2px;
+  margin: 10px 0 20px 0;
+  padding: 20px 20px;
+}
+
+.mheight {
+  min-height: 200px;
+}
+
+.small {
+  font-size: 10pt;
+  color: #aaa;
+}
+
