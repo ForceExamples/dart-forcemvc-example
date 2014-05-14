@@ -2,7 +2,7 @@ part of example_forcedart;
 
 class SessionStrategy extends SecurityStrategy {
   
-  bool checkAuthorization(HttpRequest req) {
+  bool checkAuthorization(HttpRequest req, data) {
     HttpSession session = req.session;
     return (session["user"]!=null);
   }   
