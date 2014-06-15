@@ -4,6 +4,7 @@ import 'dart:io';
 import 'dart:async';
 import 'dart:math';
 import 'package:forcemvc/force_mvc.dart';
+import 'package:force_it/force_it.dart';
 
 part 'controllers/post_controller.dart';
 part 'controllers/login_controller.dart';
@@ -11,7 +12,10 @@ part 'controllers/redirect_controller.dart';
 part 'controllers/path_controller.dart';
 part 'controllers/count_controller.dart';
 part 'controllers/secure_controller.dart';
+part 'controllers/about_controller.dart';
+
 part 'controllers/random_interceptor.dart';
+
 
 part 'controllers/security/session_strategy.dart';
 
@@ -24,9 +28,14 @@ void main() {
   // Create a force server 
   WebServer server = new WebServer(host: "127.0.0.1",
                                    port: port,  
-                                   clientFiles: '../client/',
+                                   staticFiles: '../client/static/',
+                                   clientFiles: '../client/build/web/',
                                    clientServe: serveClient,
                                    views: "views/");
+  // register yaml files
+  server.registry.loadValues("../app.yaml");
+  server.registry.loadValues("pubspec.yaml");
+  
   // Set up logger.
   server.setupConsoleLog();
   
