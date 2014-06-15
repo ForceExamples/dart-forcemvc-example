@@ -33,8 +33,8 @@ void main() {
                                    clientServe: serveClient,
                                    views: "views/");
   // register yaml files
-  server.registry.loadValues("../app.yaml");
-  server.registry.loadValues("pubspec.yaml");
+  server.loadValues("../app.yaml");
+  server.loadValues("pubspec.yaml");
   
   // Set up logger.
   server.setupConsoleLog();
