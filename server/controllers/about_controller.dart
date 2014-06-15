@@ -7,7 +7,7 @@ class AboutController {
   String application;
   
   @Value("version")
-  String version;
+  int version;
   
   @RequestMapping(value: "/test/about/")
   String aboutPage(req, Model model) {
