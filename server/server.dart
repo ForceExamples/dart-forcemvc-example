@@ -14,8 +14,7 @@ part 'controllers/count_controller.dart';
 part 'controllers/secure_controller.dart';
 part 'controllers/about_controller.dart';
 
-part 'controllers/random_interceptor.dart';
-
+part 'interceptors/random_interceptor.dart';
 
 part 'controllers/security/session_strategy.dart';
 
