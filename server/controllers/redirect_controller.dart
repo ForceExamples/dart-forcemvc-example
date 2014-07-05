@@ -1,14 +1,15 @@
 part of example_forcedart;
 
 @Controller()
+@RequestMapping(value: "/redirect")
 class RedirectController {
   
   int redirect = 0;
   
-  @RequestMapping(value: "/redirect/")
+  @RequestMapping(value: "/start")
   String variable(req, Model model) {
     redirect++;
-    return "redirect:/viewable/";
+    return "redirect:/redirect/viewable/";
   }
   
   @RequestMapping(value: "/viewable/")
