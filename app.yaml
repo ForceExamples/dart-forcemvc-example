@@ -1,20 +1,14 @@
-application: Force MVC Example 
-version: 1
-deploy: true
-pub: true
-dart2js: true 
-framework: force
+name: Force MVC Example 
 
-handlers:
+server:
 - url: /
-  script: server.dart
 
-# Static content, will be served by your app's Nginx instance   
+client:
 - url: /web
   match: preregex
-  static_dir: web
+  dir: web
   
 - url: /static
   match: preregex
-  static_dir: static
+  dir: static
   
