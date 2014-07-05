@@ -3,16 +3,16 @@ part of example_forcedart;
 @Controller()
 class AboutController {
   
-  @Value("application")
-  String application;
+  @Value("name")
+  String name;
   
-  @Value("version")
-  int version;
+  @Value("description")
+  int description;
   
   @RequestMapping(value: "/test/about/")
   String aboutPage(req, Model model) {
-    model.addAttribute("application", application);
-    model.addAttribute("version", version);
+    model.addAttribute("name", name);
+    model.addAttribute("description", description);
     return "about";
   }
   
