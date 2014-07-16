@@ -7,7 +7,7 @@ class AboutController {
   String name;
   
   @Value("description")
-  int description;
+  String description;
   
   @RequestMapping(value: "/test/about/")
   String aboutPage(req, Model model) {
