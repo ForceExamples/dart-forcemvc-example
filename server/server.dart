@@ -18,6 +18,8 @@ part 'interceptors/random_interceptor.dart';
 
 part 'controllers/security/session_strategy.dart';
 
+part 'advice/text_advice.dart';
+
 void main() { 
   // Setup what port to listen to 
   var portEnv = Platform.environment['PORT'];
