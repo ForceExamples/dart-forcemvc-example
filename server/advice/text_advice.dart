@@ -1,6 +1,6 @@
 part of example_forcedart;
 
-@ControllerAdvice()
+@ControllerAdvice
 class TextAdvice {
   
   @ModelAttribute("text")

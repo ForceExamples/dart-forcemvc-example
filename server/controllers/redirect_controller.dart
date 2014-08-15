@@ -1,6 +1,6 @@
 part of example_forcedart;
 
-@Controller()
+@Controller
 @RequestMapping(value: "/redirect")
 class RedirectController {
   

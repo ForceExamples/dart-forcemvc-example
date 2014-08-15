@@ -1,6 +1,6 @@
 part of example_forcedart;
 
-@Controller()
+@Controller
 class PostController {
   
   @RequestMapping(value: "/form/")

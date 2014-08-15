@@ -1,6 +1,6 @@
 part of example_forcedart;
 
-@Controller()
+@Controller
 class CountController {
   int count = 0;
   

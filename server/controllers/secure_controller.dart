@@ -1,7 +1,7 @@
 part of example_forcedart;
 
-@Controller()
-@Authentication()
+@Controller
+@Authentication
 class AdminController {
   
   int redirect = 0;
