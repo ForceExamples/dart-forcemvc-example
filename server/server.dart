@@ -4,7 +4,7 @@ import 'dart:io';
 import 'dart:async';
 import 'dart:math';
 import 'package:forcemvc/force_mvc.dart';
-import 'package:force_it/force_it.dart';
+import 'package:wired/wired.dart';
 
 part 'controllers/post_controller.dart';
 part 'controllers/login_controller.dart';
@@ -27,7 +27,7 @@ void main() {
   var serveClient = portEnv == null ? true : false;
   
   // Create a force server 
-  WebServer server = new WebServer(host: "127.0.0.1",
+  WebApplication server = new WebApplication(host: "127.0.0.1",
                                    port: port,  
                                    staticFiles: '../client/static/',
                                    clientFiles: '../client/build/web/',
@@ -44,7 +44,7 @@ void main() {
   server.strategy = new SessionStrategy();
   
   // Serve the view called index as default 
-  server.on("/", (req, model) => "index");
+  server.use("/", (req, model) => "index");
   
   // Start serving force 
   server.start();
